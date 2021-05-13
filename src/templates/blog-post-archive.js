@@ -5,6 +5,7 @@ import parse from "html-react-parser"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Banner from "../components/banner"
 
 const BlogIndex = ({
   data,
@@ -27,14 +28,12 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-      <Seo title="All posts" />
-
-      <Bio />
-
+      <Seo title="Mercury Towers by" />
+      <Banner/>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.title
-
+         
           return (
             <li key={post.uri}>
               <article
